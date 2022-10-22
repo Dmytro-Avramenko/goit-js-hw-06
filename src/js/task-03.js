@@ -49,14 +49,10 @@ const images = [
 const galleryEl = document.querySelector('.gallery');
 
 const makeGallery = items => {
-  return items.map(
-    item => {
+  return items.map(item => {
     const galleryItem = document.createElement('li');
     
-    galleryItem.insertAdjacentHTML('beforeend',
-    `<img src=${item.url} 
-    alt=${item.alt} 
-    width="320">`);
+    galleryItem.insertAdjacentHTML('beforeend', `<img src=${item.url} alt=${item.alt} width="320">`);
 
     return galleryItem;
   });
