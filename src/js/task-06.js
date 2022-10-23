@@ -1,9 +1,14 @@
-const RefInput = document.querySelector('.input');
+const refInput = document.querySelector('#validation-input'); 
 
-console.log(RefInput);
+refInput.addEventListener('blur', targetOnInputChange);
 
-RefInput.addEventListener('blur', onInputBlur);
-
-function onInputBlur () {
-    console.log(фокус)
+function targetOnInputChange(event) {
+    const inputLength = Number(refInput.dataset.length);
+    // console.log(inputLength);
+    
+    if (event.currentTarget.value.length === inputLength) {
+        refInput.classList.add ('valid');
+    } else {
+        refInput.classList.add ('invalid');
+    };
 }

@@ -1,6 +1,8 @@
-const counterValue = document.querySelector(``);
+// const refs = {
+//     input: document.querySelector('input > data-length'),
+    
+//     }; 
 
 
 
-
-// onTargetButtonClick
+// console.log(refs.input);
