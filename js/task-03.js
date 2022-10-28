@@ -1,3 +1,10 @@
+// В третьому завданні потрібно створити колекцію елементів,
+// та потім вставити її в розмітку за одну операцію.
+// Також потрібно використовувати тільки метод insertAdjacentHTML,
+// метод append не потрібно.
+
+
+// Третій спосіб працює)
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -12,6 +19,18 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryEl = document.querySelector(".gallery");
+
+const makeGallery = images
+  .map((image) =>
+      `<li class="gallery__item"><img class="gallery__image"; 
+      src="${image.url}"; alt="${image.alt}" width="320"></li>`
+  )
+  .join("");
+
+galleryEl.insertAdjacentHTML("beforeend", makeGallery);
+
 
 // Перший спосіб працює)
 // const firstImgEl = document.createElement('img');
@@ -46,17 +65,17 @@ const images = [
 
 
 // Другий спосіб)
-const galleryEl = document.querySelector('.gallery');
+// const galleryEl = document.querySelector('.gallery');
 
-const makeGallery = items => {
-  return items.map(item => {
-    const galleryItem = document.createElement('li');
+// const makeGallery = items => {
+//   return items.map(item => {
+//     const galleryItem = document.createElement('li');
     
-    galleryItem.insertAdjacentHTML('beforeend', `<img src=${item.url} alt=${item.alt} width="320">`);
+//     galleryItem.insertAdjacentHTML('beforeend', `<img src=${item.url} alt=${item.alt} width="320">`);
 
-    return galleryItem;
-  });
-};
+//     return galleryItem;
+//   });
+// };
 
-const elements = makeGallery(images);
-galleryEl.append(...elements);
+// const elements = makeGallery(images);
+// galleryEl.append(...elements);
