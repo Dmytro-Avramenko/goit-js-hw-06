@@ -20,6 +20,12 @@ decrementEl.addEventListener('click', decrementBtnClickHandler);
 incrementEl.addEventListener('click', incrementBtnClickHandle);
 
 
+
+
+
+
+
+
 // let counterValue = 0;
 
 // const decrementBtn = document.querySelector('[data-action="decrement"]');

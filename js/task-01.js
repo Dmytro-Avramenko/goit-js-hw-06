@@ -10,6 +10,10 @@ categoriesEl.forEach(item => {
     console.log(`Elements: ${item.lastElementChild.children.length}`);
 });
 
+
+
+
+
 // const categoriesEl = document.querySelectorAll(".item");
 // console.log('Number of categories:', categoriesEl.length);
 

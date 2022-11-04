@@ -1,5 +1,9 @@
 // У другому завданні потрібно скористатись
 // перебираючим методом масиву.
+// У другому завданні потрібно створити пустий 
+// масив (за межами циклу forEach), потім
+// наповнити його в циклі forEach і після цього
+// вставити його за одну операцію також за межами циклу forEach. 
 
 const ingredients = [
   'Potatoes',
@@ -12,13 +16,31 @@ const ingredients = [
 
 const listRef = document.querySelector('#ingredients');
 
-ingredients.forEach(ingredient => {
+const createItemEl = ingredients.map(el => {
   const items = document.createElement('li');
-  items.textContent=`${ingredient}`;
   items.classList.add('item');
+  items.textContent = el;
 
-  listRef.append(items);
-})
+  return items;
+});
+
+listRef.append(...createItemEl);
+
+
+
+
+
+
+// const listRef = document.querySelector('#ingredients');
+
+// ingredients.forEach(ingredient => {
+//   const items = document.createElement('li');
+//   items.textContent=`${ingredient}`;
+//   items.classList.add('item');
+
+//   listRef.append(items);
+// })
+
 
 // const ingredients = [
 //   'Potatoes',

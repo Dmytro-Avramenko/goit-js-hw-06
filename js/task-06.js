@@ -18,6 +18,13 @@ function targetOnInputChange(event) {
 }
 
 
+
+
+
+
+
+
+
 // не правильний спосіб????
 // const refInput = document.querySelector('#validation-input'); 
 
