@@ -19,9 +19,11 @@ const textValue = document.querySelector('.color');
 refButton.addEventListener('click', onTargetButtonClick);
 
 function onTargetButtonClick() {
-  textValue.textContent = getRandomHexColor();
-  refBody.style.backgroundColor = getRandomHexColor();
+  textValue.textContent = getRandomHexColor(); 
+  refBody.style.backgroundColor =textValue.textContent;
+
   // console.log(refBody.style.backgroundColor)
   // console.log(textValue.textContent)
   // console.log(`клік`)
 }
+
